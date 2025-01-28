@@ -5,7 +5,7 @@ import TodoItems from './components/TodoItems'
 
 const App = () => {
 
-    const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState([])
 
   const addTodo = (formData) => {
     // use the todos setter to add formData to todos array
@@ -17,7 +17,7 @@ const App = () => {
     <>
       <h1>To Do App</h1>
       <TodoForm addTodo={addTodo} />
-      {/* <TodoItems /> */}
+      <TodoItems todos={todos} />
     </>
   )
 }

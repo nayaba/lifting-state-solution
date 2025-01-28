@@ -1,7 +1,12 @@
-const TodoItems = () => {
+const TodoItems = (props) => {
+    
     return (
         <>
-            <h1>Todo Items</h1>
+            <ul>
+                {props.todos.map((todo, index) => (
+                  <li key={index}>{todo.todo}</li>  
+                ))}
+            </ul>
         </>
     )
 }

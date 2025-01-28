@@ -18,13 +18,14 @@ const TodoForm = (props) => {
         event.preventDefault()
         // setTodo(formData.todo)
         props.addTodo(formData)
+        setFormData(initialState)
     }
 
     return (
         <form onSubmit={handleSubmit}>
             {/* {todo} */}
             <label htmlFor="">Todo: </label>
-            <input type="text" onChange={handleChange} name='todo' />
+            <input type="text" onChange={handleChange} name='todo' value={formData.todo} />
             <button style={{backgroundColor: "violet"}} type="submit">
                 Create to-do</button>
         </form>
